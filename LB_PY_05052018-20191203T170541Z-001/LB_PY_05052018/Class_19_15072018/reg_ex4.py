@@ -1,0 +1,10 @@
+import re
+
+st = input('Enter the string: ')
+pat = r'\b[1-9]\b|\b[1-9][0-9]\b|\b[1][0-9][0-9]\b|\b[2][0-4][0-9]\b|\b[2][0-5][0-5]\b'
+# (1-9|1-99|100-199|200-249|200-255)
+#pat=r'\b\d{3}\b'
+#pat=r'\b[1-2345]\b'
+words = re.findall(pat,st)
+
+print(words)
